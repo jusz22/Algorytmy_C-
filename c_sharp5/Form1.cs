@@ -1,3 +1,5 @@
+using Accessibility;
+
 namespace c_s_5
 {
     public partial class Form1 : Form
@@ -55,6 +57,10 @@ namespace c_s_5
             w6.Add(w7);
             B(w4);
             MessageBox.Show(napis);
+        }
+        private void button3_Click(object sender, EventArgs e)
+        {
+
         }
         void B(Wezel2 w)
         {
@@ -120,6 +126,7 @@ namespace c_s_5
             else
                 this.praweDziecko = dziecko;
         }
+
         /*      public Wezel3 Znajdz(int number)
                 {
                     return Wezel3;
@@ -186,6 +193,76 @@ namespace c_s_5
                         w = w.praweDziecko;
                 }
             }
+        }
+        public Wezel3 Znajdz(int number)
+        {
+            var w = this.korzen;
+            if (w.wartosc == number)
+            {
+                return w;
+            }
+            while (true)
+            {
+                if (number < w.wartosc)
+                {
+                    if (w.leweDziecko.wartosc == number)
+                        return w;
+                    else
+                        w = w.leweDziecko;
+                }
+                if (number >= w.wartosc)
+                {
+                    if (number == w.praweDziecko.wartosc)
+                        return w;
+                    else
+                        w = w.praweDziecko;
+                }
+            }
+        }
+        public Wezel3 ZnajdzMin(Wezel3 w)
+        {
+            var k = w;
+            while (true)
+            {
+                if(k.leweDziecko == null)
+                    return k;
+                k = k.leweDziecko;
+            }
+        }
+        public Wezel3 ZnajdzMax(Wezel3 w)
+        {
+            var k = w;
+            while (true)
+            {
+                if (k.praweDziecko == null)
+                    return k;
+                k = k.praweDziecko;
+            }
+        }
+        public Wezel3 Nastepnik(Wezel3 w)
+        {
+            if (w.praweDziecko != null)
+                return ZnajdzMin(w.praweDziecko);
+            Wezel3 w_temp = w.rodzic;
+            while(w_temp != null && w_temp.leweDziecko != w)
+            {
+                w = w_temp;
+                w_temp = w_temp.rodzic;
+            }
+            return w_temp;
+        }
+        public Wezel3 Poprzednik(Wezel3 w)
+        {
+            if(w.leweDziecko != null)
+                return ZnajdzMax(w.leweDziecko);
+            Wezel3 w_temp = w;
+            while(w_temp != null && w_temp.praweDziecko!= w)
+            {
+                w = w_temp;
+                w_temp = w_temp.rodzic;
+            }
+            return w_temp;
+
         }
     }
 }
