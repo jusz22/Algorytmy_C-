@@ -1,13 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BmBmUH7qeXm58oHZn1SXQVhEAe1re7yVngmVQo87AX5n7CqAEbJbkSXCuoefHUqXJAr5JX1+7BnPmhW3EQd2qQ==",
+  "dgSpecHash": "Mj80Hnxo8e8fMHTKbhZTdp9pUsD6GTV0MKJot8DcjiUtjDV/bv/5IEIHWFfWn4HgAOswZYlAbVsw/8s7jQX2JQ==",
   "success": true,
-  "projectFilePath": "D:\\Downloads\\c_sharp5\\c_sharp5.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\Jan\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.25\\microsoft.windowsdesktop.app.ref.6.0.25.nupkg.sha512",
-    "C:\\Users\\Jan\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.25\\microsoft.netcore.app.ref.6.0.25.nupkg.sha512",
-    "C:\\Users\\Jan\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.25\\microsoft.aspnetcore.app.ref.6.0.25.nupkg.sha512",
-    "C:\\Users\\Jan\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.25\\microsoft.netcore.app.host.win-x64.6.0.25.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\janju\\source\\repos\\jusz22\\Algorytmy_C-\\c_sharp5\\c_sharp5.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

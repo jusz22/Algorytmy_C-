@@ -264,5 +264,50 @@ namespace c_s_5
             return w_temp;
 
         }
+        public Wezel3 deleteNode(Wezel3 node, DrzewoBinarne tree)
+        {
+            Wezel3 x;
+            Wezel3 y;
+            if(node.leweDziecko == null || node.praweDziecko == null)
+            {
+                y = node;
+            }
+            else
+            {
+                y = Nastepnik(node);
+            }
+            if(y.leweDziecko != null)
+            {
+                x = y.leweDziecko;
+            }
+            else
+            {
+                x = y.praweDziecko;
+            }
+            if(x != null)
+            {
+                x.rodzic = y.rodzic;
+            }
+            if(y.rodzic == null)
+            {
+                tree.korzen = x;
+            }
+            else
+            {
+                if(y == y.rodzic.leweDziecko)
+                {
+                    y.rodzic.leweDziecko = x;
+                }
+                else
+                {
+                    y.rodzic.praweDziecko = x;
+                }
+            }
+            if(y != node)
+            {
+                node.wartosc = y.wartosc;
+            }
+            return y;
+        }
     }
 }

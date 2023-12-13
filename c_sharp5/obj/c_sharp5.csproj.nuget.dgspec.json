@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Downloads\\c_sharp5\\c_sharp5.csproj": {}
+    "C:\\Users\\janju\\source\\repos\\jusz22\\Algorytmy_C-\\c_sharp5\\c_sharp5.csproj": {}
   },
   "projects": {
-    "D:\\Downloads\\c_sharp5\\c_sharp5.csproj": {
+    "C:\\Users\\janju\\source\\repos\\jusz22\\Algorytmy_C-\\c_sharp5\\c_sharp5.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Downloads\\c_sharp5\\c_sharp5.csproj",
+        "projectUniqueName": "C:\\Users\\janju\\source\\repos\\jusz22\\Algorytmy_C-\\c_sharp5\\c_sharp5.csproj",
         "projectName": "c_sharp5",
-        "projectPath": "D:\\Downloads\\c_sharp5\\c_sharp5.csproj",
-        "packagesPath": "C:\\Users\\Jan\\.nuget\\packages\\",
-        "outputPath": "D:\\Downloads\\c_sharp5\\obj\\",
+        "projectPath": "C:\\Users\\janju\\source\\repos\\jusz22\\Algorytmy_C-\\c_sharp5\\c_sharp5.csproj",
+        "packagesPath": "C:\\Users\\janju\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\janju\\source\\repos\\jusz22\\Algorytmy_C-\\c_sharp5\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Jan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\janju\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -50,24 +50,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.25, 6.0.25]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[6.0.25, 6.0.25]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.25, 6.0.25]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.25, 6.0.25]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -76,7 +58,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
