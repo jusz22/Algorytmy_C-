@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
 using System.Security.Cryptography.X509Certificates;
+using System.Net.Http.Headers;
 
 namespace c_s_dijkstra
 {
@@ -162,36 +163,42 @@ namespace c_s_dijkstra
 
             return subGraphs[0];
         }
-        public Graph Dijkstra(Graph graph, Node currentNode)
+        public float[] Dijkstra(Graph graph, Node currentNode)
         {
-            List<Node> visitedNodes = new List<Node>();
+            bool[] visited = new bool[graph.nodes.Count];
             float[] weights = new float[graph.nodes.Count];
             
             for(int i = 0; i < graph.nodes.Count; i++)
             {
                 weights[i] = int.MaxValue;
+                visited[i] = false;
             }
             
             weights[currentNode.value] = 0f;
 
-            for (int i = 0; i < currentNode.edges.Count; i++)
+            for (int i = 0; i < graph.nodes.Count - 1; i++)
             {
-                Node nextNode = currentNode.edges.ElementAt(i).end;
-                weights[nextNode.value] = currentNode.edges.ElementAt(i).weight;
+                int u = FindMinIndex(weights, visited);
+                visited[u] = true;
+
+                for(int j = 0; j < graph.nodes.Count; j++)
+                {
+                    
+                }
 
             }
             
 
         }
 
-        int FindMinIndex(float[] tab)
+        int FindMinIndex(float[] weights, bool[] visited)
         {
-            float minValue = tab[1];
-            int minIndex = 0;
-            for (int i = 2; i <= tab.Length; i++)
+            float minValue = float.MaxValue;
+            int minIndex = -1;
+            for (int i = 0; i < weights.Count(); i++)
             {
-                if (tab[i] < minValue)
-                    minValue = tab[i];
+                if (visited[i] == false && weights[i] <= minValue)
+                    minValue = weights[i];
                     minIndex = i;
             }
             return minIndex;
