@@ -79,6 +79,25 @@ namespace c_s_dijkstra
 
             krusnal.ShowGraph();
         }
+        private void NWP()
+        {
+            int[, ] matrix = new int[9,5];
+            for(int i = 0; i < 9; i++)
+            {
+                matrix[i, 0] = 0;
+            }
+            for(int i = 0; i < 5; i++)
+            {
+                matrix[0, i] = 0;
+            }
+            for(int i = 1; i < 9; i++)
+            {
+                for(int j = 1; j < 5; j++)
+                {
+
+                }
+            }
+        }
     }
 
     public class Graph
@@ -165,29 +184,31 @@ namespace c_s_dijkstra
         }
         public float[] Dijkstra(Graph graph, Node currentNode)
         {
-            bool[] visited = new bool[graph.nodes.Count];
-            float[] weights = new float[graph.nodes.Count];
+            int numOfNodes = graph.nodes.Count;
+            bool[] visited = new bool[numOfNodes];
+            float[] weights = new float[numOfNodes];
             
-            for(int i = 0; i < graph.nodes.Count; i++)
+
+            for (int i = 0; i < numOfNodes; i++)
             {
                 weights[i] = int.MaxValue;
                 visited[i] = false;
             }
-            
+
             weights[currentNode.value] = 0f;
 
-            for (int i = 0; i < graph.nodes.Count - 1; i++)
+            for (int i = 0; i < numOfNodes - 1; i++)
             {
                 int u = FindMinIndex(weights, visited);
                 visited[u] = true;
 
-                for(int j = 0; j < graph.nodes.Count; j++)
+                foreach (var edge in )
                 {
-                    
+
                 }
 
             }
-            
+
 
         }
 
@@ -199,7 +220,7 @@ namespace c_s_dijkstra
             {
                 if (visited[i] == false && weights[i] <= minValue)
                     minValue = weights[i];
-                    minIndex = i;
+                minIndex = i;
             }
             return minIndex;
         }
@@ -219,7 +240,7 @@ namespace c_s_dijkstra
         {
             foreach (var item in graph.nodes)
             {
-                if(item.value == value)
+                if (item.value == value)
                 {
                     return item;
                 }
